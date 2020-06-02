@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Wyoming IBC" />
+  <title>Introduction to Git</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="screen.css" type="text/css" />
+</head>
+<body>
+<div id="header">
+<h1 class="title">Introduction to Git</h1>
+<h2 class="author">Wyoming IBC</h2>
+<h3 class="date">October 7, 2019</h3>
+</div>
+<h2 id="table-of-contents">Table of Contents</h2>
+<p><a href="#what-is-git-and-why-do-i-need-it">1. What is Git and Why do I need it?</a></p>
+<p><a href="#how-does-git-work">2. How does Git work?</a></p>
+<h2 id="what-is-git-and-why-do-i-need-it">1. What is Git and Why do I need it?</h2>
+<p>Git is a version control system. Don't let that make you feel like you are a software engineer. You don't have to be one for it to be useful to you. In the simplest terms, git keeps a journal of all the changes you will make to any files and folders (create, edit, copy, move, delete etc.) in a given project. Think of it as a virtual assistant that is always listening and keeping track of what you do.</p>
+<p>GitHub as you probably already figured out, is an online resource that allows people to host and archive their code. The code can be updated/maintained from multiple computers that you may have access to. You may keep it all to yourself, share it with collaborators or if its useful enough, share it with the community at large. Code is divided into repositories on GitHub and you may have one or a hundred each dedicated to a different project you are working on. Consider that you are teaching a course for which you may host the weekly materials such as presentations, assignments and exam solutions to a GitHub repository and then share the repo with your students.</p>
+<p>As you can see, one doesn't really need to be a software programmer for Git and GitHub to be useful to them. With this introduction, we are barely scratching the surface. In the Further Reading section below, you will find additional resources to learn about these tools. For now, we will set up your environment so it's usable today.</p>
+<h2 id="how-does-git-work">2. How does Git work?</h2>
+<ul>
+<li><p><strong>Note For Windows Users</strong>: Please install git from <a href="https://gitforwindows.org" class="uri">https://gitforwindows.org</a></p></li>
+<li><p>Open the commandline terminal on your system. For Windows, right click and choose Git Bash. For Mac, search for terminal in the spotlight search.</p></li>
+</ul>
+<center>
+<img src="git-bash.png" width=300></img> <img src="terminal.png" width=400></img>
+</center>
+<ul>
+<li>Check whether git is working on your system:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> --version
+
+<span class="fu">git</span> version 2.20.1 (Apple Git-117)</code></pre></div>
+<ul>
+<li>To check git's documentation i.e. help manual</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">man</span> git</code></pre></div>
+<center>
+<img src="githelp.png" width=750></img> INSERT IMAGE: githelp.png width 750
+</center>
+<ul>
+<li>To exit the interactive documentation</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">q</span></code></pre></div>
+<ul>
+<li>Check the Status of the current directory where your prompt is located:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> status</code></pre></div>
+<p>fatal: not a git repository (or any of the parent directories): .git</p>
+<ul>
+<li><p>You haven't created any git repositories yet on your system, so this warning message is to be expected.</p></li>
+<li><p>Let's create a new repository for testing purposes. First, check where you are on the system, then create a new folder named gitproject.</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">pwd</span>
+
+<span class="ex">/Users/wyoibc</span>
+
+<span class="fu">mkdir</span> gitproject
+
+<span class="bu">cd</span> gitproject
+
+<span class="bu">pwd</span>
+
+<span class="ex">/Users/wyoibc/gitproject</span></code></pre></div>
+<ul>
+<li>Initiate a new repository</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> init</code></pre></div>
+<ul>
+<li><p>Initialized empty Git repository in /Users/wyoibc/gitproject/.git/</p></li>
+<li><p>Check the status again</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> status
+
+<span class="ex">On</span> branch master
+
+<span class="ex">No</span> commits yet
+
+<span class="ex">nothing</span> to commit (create/copy files and use <span class="st">&quot;git add&quot;</span> to track)</code></pre></div>
+<ul>
+<li>This is normal as well since we haven't yet created any content in here. Now let's go ahead and create a new file.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">touch</span> README.md
+
+<span class="ex">vim</span> README.md</code></pre></div>
+<ul>
+<li>Create some content in the file</li>
+</ul>
+<ul>
+<li><p>This is a new repository.</p></li>
+<li><p>Save the changes and exit</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">:<span class="ex">wq</span></code></pre></div>
+<ul>
+<li>Now check the git status again</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> status
+
+
+<span class="ex">On</span> branch master
+
+<span class="ex">No</span> commits yet
+
+<span class="ex">Untracked</span> files:
+  <span class="kw">(</span><span class="ex">use</span> <span class="st">&quot;git add &lt;file&gt;...&quot;</span> to include in what will be committed<span class="kw">)</span>
+
+    <span class="ex">README.md</span>
+
+<span class="ex">nothing</span> added to commit but untracked files present (use <span class="st">&quot;git add&quot;</span> to track)</code></pre></div>
+<ul>
+<li>As you can see, Git is now aware of the changes you made to this repository. It knows that there is a new file, although the file is not yet on Git's roll call. This is by design. Often times, you don't want every file/folder to be tracked by git. So git only tracks changes in files when you ask it to. Let's go ahead and do that.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> add README.md
+
+<span class="fu">git</span> status
+
+<span class="ex">On</span> branch master
+
+<span class="ex">No</span> commits yet
+
+<span class="ex">Changes</span> to be committed:
+  <span class="kw">(</span><span class="ex">use</span> <span class="st">&quot;git rm --cached &lt;file&gt;...&quot;</span> to unstage<span class="kw">)</span>
+
+    <span class="ex">new</span> file:   README.md</code></pre></div>
+</body>
+</html>
